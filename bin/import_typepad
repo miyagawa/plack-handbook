@@ -1,0 +1,62 @@
+#!/usr/bin/perl
+use strict;
+use HTML::WikiConverter::Markdown;
+
+my $wc = HTML::WikiConverter->new( dialect => 'Markdown' );
+
+my $process = sub {
+    my($title, $body) = @_;
+    my $filename = normalize($title);
+    open my $out, ">", "$filename.md" or die $!;
+
+    my $markdown = github_flavored($wc->html2wiki($body));
+    print $out "# $title\n\n", $markdown;
+};
+
+my($title, $body, $in_body);
+
+while (<>) {
+    if (/^TITLE: (.*)$/) {
+        $title = $1;
+    } elsif (/^BODY:/) {
+        $in_body = 1;
+        $body = '';
+    } elsif ($in_body) {
+        if (/^-----$/) {
+            $process->($title, $body);
+            $in_body = 0;
+            next;
+        }
+        $body .= $_;
+    }
+}
+
+sub normalize {
+    my $title = shift;
+    $title =~ s/^Day (\d+)/sprintf '%02d', $1/e;
+    $title =~ s/[^a-zA-Z0-9\-]+/_/g;
+    lc $title;
+}
+
+sub github_flavored {
+    my $md = shift;
+
+    my @out;
+    my $in_code = 0;
+    for (split /\n/, $md) {
+        if (s/^    //) {
+            if (!$in_code) {
+                push @out, "```"; # begin
+                $in_code = 1;
+            }
+        } else {
+            if ($in_code) {
+                push @out, "```"; # end
+                $in_code = 0;
+            }
+        }
+        push @out, $_;
+    }
+
+    join "\n", @out;
+}
