@@ -6,6 +6,8 @@ Middleware is a concept in PSGI (as always, stolen from Python's WSGI and Ruby's
 
 ![WSGI middleware onion][1]
 
+(Image quoted from Pylons project for Python WSGI architecture)
+
 This picture illustrates the middleware concept very well. The PSGI application is in the core of the Onion layers, and middleware components wrap the original application in return, and they preprocess as a request comes in (outer to inner) and then postprocess the response as a response goes out (inner to outer).
 
 Lots of functionalities can be added to the PSGI application by wrapping it with a middleware component, from HTTP authentication, capturing errors to logging output or wrapping JSON output with JSONP.
@@ -73,7 +75,7 @@ builder {
 
 This will enable the Basic authentication middleware to CGI::Application based application. You can do the same with [any other frameworks that supports PSGI][6].
 
-  [1]: http://docs.pylonsproject.org/projects/pylons_framework/dev/_images/pylons_as_onion.png
+  [1]: http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/_images/pylons_as_onion.png
   [2]: http://search.cpan.org/perldoc?Plack::Middleware
   [3]: http://advent.plackperl.org/2009/12/day-3-using-plackup.html
   [4]: http://bulknews.typepad.com/blog/2009/10/develstacktraceashtml.html
