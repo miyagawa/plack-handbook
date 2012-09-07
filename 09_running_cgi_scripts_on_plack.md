@@ -1,6 +1,6 @@
 # Day 9: Running CGI scripts on Plack
 
-For the couple of days we've been talking about how to convert existing CGI based applications to PSGI, and then run them as a PSGI application. Today we'd show you the ultimate way to run _any_ CGI scripts as a PSGI application, most of the time unmodified.
+For a couple of days we've been talking about how to convert existing CGI based applications to PSGI, and then run them as a PSGI application. Today we'd show you the ultimate way to run _any_ CGI scripts as a PSGI application, most of the time unmodified.
 
 [CGI::PSGI][1] is a subclass of CGI.pm to allow you a very easy migration from CGI.pm with only _a few lines of code changes_ to run it on PSGI environment. But what about a messy or legacy CGI script that just prints to STDOUT a lot and is not easy to fix?
 

@@ -120,7 +120,7 @@ sub psgi {
 
 This is very straightforward, especially when compared with [Squatting::On::CGI][5]. It's almost line-by-line copy and some adjustment to use Plack::Request to parse parameters instead of CGI.pm.
 
-Similarly Catalyst uses Catalyst::Engine abstraction and [Catalyst::Engine::PSGI][6] is the adapter to run Catlayst on PSGI, which most of the code is copied from CGI.
+Similarly Catalyst, before its native support of PSGI before version 5.8, used to have Catalyst::Engine abstraction and [Catalyst::Engine::PSGI][6] was the adapter to run Catlayst on PSGI, which most of the code is copied from CGI.
 
 ## mod\_perl centric frameworks
 

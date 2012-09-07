@@ -1,5 +1,7 @@
 # Day 20: Access your local app from the internet
 
+(**EDIT**: the reverseHTTP service we mention here is not available as of 2012)
+
 These days laptops with modern operation systems allows you to quickly develop a web application and test it locally with its local IP address. Often you want to test your application with a global access, to show off your work to friends who don't have an access to your local network, or you're writing a web application that works as a [webhooks][1] callback.
 
 ### Reverse HTTP to the rescue

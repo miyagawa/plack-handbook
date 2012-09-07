@@ -4,7 +4,7 @@
 
 ### Best Practices
 
-Plack and PSGI are still really young projects but we've already discovered a couple of suggestions and advices to write a new PSGI application or a framework.
+Plack and PSGI have been around for a while, but also considered still young projects by some. However we've already discovered a couple of suggestions and advices to write a new PSGI application or a framework.
 
 When you write a new framework, be sure to have an access to the PSGI environment hash from end users applications or plugin developers, either directly or with an accessor method. This allows your framework to share and extend functionality with middleware components like Debug or Session.
 
@@ -22,12 +22,6 @@ Again, Plack is a fairly young project. It's just been 3 months since we gave th
 
 We're chatting on [IRC channel #plack on irc.perl.org][8] and there's a [mailing list][9] and [an issue tracker on github][10] to communicate with us.
 
-### On a final note...
-
-It's been an interesting experiment of writing 24 articles for 24 days, and I'm glad that I finished this myself. Next year, i'm looking forward to having your own advent entries to make the community based advent calendar.
-
-I wish you a Very Merry Christmas and a Happy New Year.
-
   [1]: http://advent.plackperl.org/2009/12/day-13-use-placktest-to-test-your-application.html
   [2]: http://github.com/
   [3]: http://github.com/search?langOverride=&q=plack&repo=&start_value=1&type=Repositories
@@ -37,4 +31,4 @@ I wish you a Very Merry Christmas and a Happy New Year.
   [7]: http://delicious.com/miyagawa/plack
   [8]: irc://irc.perl.org/#plack
   [9]: http://groups.google.com/group/psgi-plack
-  [10]: http://github.com/miyagawa/Plack/issues
+  [10]: http://github.com/plack/Plack/issues

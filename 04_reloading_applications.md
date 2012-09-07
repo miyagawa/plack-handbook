@@ -4,7 +4,7 @@
 
 ### Reload the application as necessary
 
-During the development you often change your perl code, saved in `.psgi` or `.pm` files. Because Plack servers launched by plackup command is a persistent process, your Perl code (PSGI application) is compiled and runs multiple times. So you need to restart your server whenever needed, and it's a little painful.
+During the development you often change your perl code, saved in `.psgi` or `.pm` files. Because HTTP servers launched by plackup command is usually a persistent process, your Perl code (PSGI application) is compiled and runs multiple times. So you need to restart your server whenever you update the code, and it's a little painful.
 
 So there's an option to watch changes for files under your working directory and reloads the application as needed: `-r` (or `--reload`).
 
@@ -20,11 +20,11 @@ plackup -R lib,/path/to/scripts hello.psgi
 
 as you can see, multiple paths can be monitored by combining them with `,` (comma).
 
-By default it uses a dumb timer to scan the whole directory, but if you're on Linux and have Linux::Inotify2, or on Mac and have Mac::FSEvents installed, these filesystem notification is used, so it's more efficient.
+By default it uses a dumb timer to scan the whole directory, but if you're on Linux and have Linux::Inotify2, or on Mac OS X and have Mac::FSEvents installed, these filesystem notification is automatically used, so it's more efficient.
 
 ### -r vs Server auto-detection
 
-In Day 3 I told you that the plackup's server automatic detection is smart, so if your PSGI application uses one of the event modules AnyEvent, POE or Coro, the correct backend would be chosen. Beware this automatic selection doesn't work if you use `-r` option, because plackup will now use the delayed loading technique to reload apps in the forked processes. You're recommended to explicitly set the server with `-s` option when combined with `-r` option.
+In Day 3 I told you that the plackup's server automatic detection is smart, so if your PSGI application uses one of the event modules AnyEvent or Coro, the correct backend would be chosen. Beware this automatic selection may not work if you use `-r` option, because plackup will now use the delayed loading technique to reload apps in the forked processes. You're recommended to explicitly set the server with `-s` option when combined with `-r` option.
 
 ### Reloading sucks? Shotgun!
 

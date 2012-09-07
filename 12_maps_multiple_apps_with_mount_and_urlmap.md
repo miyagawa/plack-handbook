@@ -97,4 +97,4 @@ builder {
 };
 ```
 
-And now you have three applications, each of which inherit from different web framework, running on the same server (via plackup or other Plack::Server::\* implementations) mapped on different paths.
+And now you have three applications, each of which inherit from different web framework, running on the same server (via plackup or other Plack::Handler::\* implementations) mapped on different paths.

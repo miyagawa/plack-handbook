@@ -60,7 +60,7 @@ sub hello : Local {
 }
 ```
 
-And then using Catalyst::Engine::PSGI and Plack::Builder, you can add a JSONP support to this controller.
+And then using Catalyst 5.8 with PSGI support and Plack::Builder, you can add a JSONP support to this controller.
 
 ```
 use MyApp;

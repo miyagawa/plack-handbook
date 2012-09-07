@@ -27,7 +27,7 @@ my $app = sub {
 };
 ```
 
-`CGI::PSGI->new(`$env`)` takes the PSGI environment hash and creates an instance of CGI::PSGI, which is a subclass of CGI.pm. All methods including `param()`, `query_string` etc. do the right thing to get the values from PSGI environment rather than CGI's ENV values.
+`CGI::PSGI->new($env)` takes the PSGI environment hash and creates an instance of CGI::PSGI, which is a subclass of CGI.pm. All methods including `param()`, `query_string` etc. do the right thing to get the values from PSGI environment rather than CGI's ENV values.
 
 `psgi_header` is an utility method to work just like CGI's `header` method, and returns the status code and an array reference containing the list of HTTP headers.
 

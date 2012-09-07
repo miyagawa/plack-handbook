@@ -33,7 +33,9 @@ Plack::Request is available as part of Plack on CPAN. Your framework can use Pla
 
 ### Use Plack::Request or not?
 
-Directly using Plack::Request in the `.psgi` code is quite handy to quickly write and test your code but not really recommended for a large scale application. It's exactly like writing a 1000 lines of `.cgi` script where you could factor out the application code into a module (`.pm` files). The same thing applies to `.psgi` file: it's best to create an application class by using and possibly extending Plack::Request, and then have just a few lines of code in `.psgi` file with [Plack::Builder to configure middleware components][6].
+Directly using Plack::Request in the `.psgi` code is quite handy to quickly write and test your code but not really recommended for a large scale application. It's exactly like writing a 1000 lines of `.cgi` script where you could factor out the application code into a module (`.pm` files). 
+
+The same thing applies to `.psgi` file: it's best to create an application class by using and possibly extending Plack::Request, and then have just a few lines of code in `.psgi` file with [Plack::Builder to configure middleware components][6].
 
 Plack::Request is also supposed to be used from a web application framework to [adapt to PSGI interface][7].
 
