@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 This little handbook is based on the content of website [Plack Advent Calendar](http://advent.plackperl.org/). The calendar had 24 useful short posts explaining the concept of PSGI and tutorials how to adapt Plack to the existing web applications.
 

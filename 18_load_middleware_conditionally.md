@@ -1,4 +1,4 @@
-# Day 18: Load middleware conditionally
+## Day 18: Load middleware conditionally
 
 I've introduced a couple of middleware components. Some of them are useful and could be enabled globally, while others might be better enabled on certain conditions. Today we'll talk about a solution to this.
 

@@ -1,4 +1,4 @@
-# Day 20: Access your local app from the internet
+## Day 20: Access your local app from the internet
 
 (**EDIT**: the reverseHTTP service we mention here is not available as of 2012)
 

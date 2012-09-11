@@ -1,4 +1,4 @@
-# Day 11: Using Plack::Builder
+## Day 11: Using Plack::Builder
 
 [Yesterday](http://advent.plackperl.org/2009/12/day-10-using-plack-middleware.html) we saw how to enable Plack middleware components in .psgi file, using its `wrap` class method. The way you `use` the middleware and then wrap the `$app` with `wrap` is tedious and not intuitive, so we have a DSL (Domain Specific Language) to make it much easier, and that is Plack::Builder.
 

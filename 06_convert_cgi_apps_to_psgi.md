@@ -1,4 +1,4 @@
-# Day 6: Convert CGI apps to PSGI
+## Day 6: Convert CGI apps to PSGI
 
 The most popular web server environments to run web applications, for Perl, has been CGI, FastCGI and mod_perl. CGI.pm is one of the Perl core module that happens to runs fine on any of those environments (with some tweaks). That means most web applications and frameworks somehow uses CGI.pm to deal with the environment differences because it's the easiest.
 

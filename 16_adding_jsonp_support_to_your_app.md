@@ -1,4 +1,4 @@
-# Day 16: Adding JSONP support to your app
+## Day 16: Adding JSONP support to your app
 
 Today we'll see another very simple but useful example of a middleware component, this time to add functionality beyond just basic HTTP functions.
 

@@ -1,4 +1,4 @@
-# Day 2: Hello World
+## Day 2: Hello World
 
 The first program you write with any of the programming language is the one that prints "Hello World". Let's follow the tradition for PSGI as well. 
 

@@ -1,4 +1,4 @@
-# Day 24: Wrap up
+## Day 24: Wrap up
 
 24 days have passed so fast and this is the last entry for this Plack advent calendar.
 

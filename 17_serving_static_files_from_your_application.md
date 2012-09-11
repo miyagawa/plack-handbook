@@ -1,4 +1,4 @@
-# Day 17: Serving static files from your application
+## Day 17: Serving static files from your application
 
 On [day 5](http://advent.plackperl.org/2009/12/day-5-run-a-static-file-web-server-with-plack.html) we talked about serving files from the current directory using plackup. Now that we've learned how to [use middleware](http://advent.plackperl.org/2009/12/day-10-using-plack-middleware.html) and [compound multiple applications with URLMap](http://advent.plackperl.org/2009/12/day-12-maps-multiple-apps-with-mount-and-urlmap.html) it's extremely trivial to add a functionality you definitely need when developing an application: serving static files.
 

@@ -1,4 +1,4 @@
-# Day 21: Lint your application and middleware
+## Day 21: Lint your application and middleware
 
 We've been talking about [adapting existing web frameworks to PSGI](http://advent.plackperl.org/2009/12/day-8-adapting-web-frameworks-to-psgi.html) and writing a new application using PSGI as an interface, but we haven't talked about error handling. 
 

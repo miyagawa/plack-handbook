@@ -1,4 +1,4 @@
-# Day 3: Using plackup
+## Day 3: Using plackup
 
 In [day 2](http://advent.plackperl.org/2009/12/day-2-hello-world.html) article I used the plackup command to run the Hello World PSGI application. 
 

@@ -1,4 +1,4 @@
-# Day 4: Reloading applications
+## Day 4: Reloading applications
 
 [Yesterday](http://advent.plackperl.org/2009/12/day-3-using-plackup.html) I introduced the basics of plackup and its command line options. Today I'll show you more!
 
