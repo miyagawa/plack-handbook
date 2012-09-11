@@ -1,0 +1,14 @@
+all: book.mobi book.epub
+
+book.html: *.md
+	./bin/export_html.rb *.md
+
+book.mobi: book.html
+#	kindlegen book.html || true
+	ebook-convert book.html book.mobi
+
+book.epub:
+	ebook-convert book.html book.epub
+
+clean:
+	rm book.*
