@@ -22,4 +22,3 @@ and use [plackup](http://advent.plackperl.org/2009/12/day-3-using-plackup.html) 
 Similarly, most web frameworks that "supports" PSGI provides a plugin, engine or adapter to make the framework run on PSGI mode. For instance, [Catalyst](http://www.catalystframework.org/) has a Catalyst::Engine::* web server abstraction and [Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) is the engine to adapt Catalyst to run on PSGI.
 
 The point is that with "PSGI support" from web frameworks, your application doesn't need to be modified, most of the times any single lines of code. And then by switching to PSGI you'll have lots of benefits like being able to use toolchain like plackup, Plack::Test and middleware which we'll discuss later in the future advent entries.
- 

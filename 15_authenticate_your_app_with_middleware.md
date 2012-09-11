@@ -73,4 +73,4 @@ URLMap allows you to compound multiple apps into one app, so combined with Auth 
         mount "/public" => $app;
     };
 
-This way you run the same `$app` in "/public" and "/private" paths, while "/private" requires a basic authentication and "/public" doesn't. (Inlining `$env->{REMOTE_USER}`, or whatever application logic in .psgi is not really recommended -- i just used it to explain it in an obvious way)    
+This way you run the same `$app` in "/public" and "/private" paths, while "/private" requires a basic authentication and "/public" doesn't. (Inlining `$env->{REMOTE_USER}`, or whatever application logic in .psgi is not really recommended -- i just used it to explain it in an obvious way)

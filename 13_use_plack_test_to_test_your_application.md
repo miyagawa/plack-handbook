@@ -88,4 +88,3 @@ Once again, the beauty of PSGI and Plack is that everything written to run for t
     done_testing;
 
 You can of course do the same thing against any frameworks that supports PSGI.
-

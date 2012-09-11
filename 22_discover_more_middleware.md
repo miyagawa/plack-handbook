@@ -75,4 +75,3 @@ Proxy middleware is developed by Lee Aylward on [github](http://github.com/leedo
 ### More
 
 There are more middleware components available in the Plack distribution, and on [CPAN](http://search.cpan.org/search?query=plack+middleware&mode=dist). Not all middleware components are supposed to be great, but certainly they can be shared and used by most frameworks that support PSGI.
-
