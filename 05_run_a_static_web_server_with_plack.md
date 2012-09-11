@@ -2,7 +2,7 @@
 
 Plack distribution comes with some readymade PSGI applications in Plack::App namespace. Some of them might be pretty handy, and one example for that would be [Plack::App::File](http://search.cpan.org/perldoc?Plack::App::File) and [Plack::App::Directory](http://search.cpan.org/perldoc?Plack::App::Directory).
 
-Plack::App::File is to translate the request path, like /foo/bar.html into the local file, like /path/to/htdocs/foo/bar.html and opens the file handle and passes it back as a PSGI response. So that's basically what a static web server like lighttpd, nginx or Apache does.
+Plack::App::File is to translate the request path, like `/foo/bar.html` into the local file, like `/path/to/htdocs/foo/bar.html` and opens the file handle and passes it back as a PSGI response. So that's basically what a static web server like lighttpd, nginx or Apache does.
 
 Plack::App::Directory is a wrapper around Plack::App::File to give a directory index, just like [Apache's mod_autoindex](http://httpd.apache.org/docs/2.0/mod/mod_autoindex.html) does.
 

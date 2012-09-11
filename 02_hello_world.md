@@ -14,7 +14,7 @@ Here's the minimal code that prints "Hello World" to the client.
 
 PSGI application is a Perl subroutine reference (a coderef) and usually referenced as $app (but could be anything else obviously). It takes exactly one argument $env (which is not used in this code) and return an array ref containing status, headers and body. That's it.
 
-Save this code in a file named hello.psgi and then use plackup command to run it:
+Save this code in a file named `hello.psgi` and then use plackup command to run it:
 
     > plackup hello.psgi
     HTTP::Server::PSGI: Accepting connections at http://0:5000/
