@@ -5,7 +5,7 @@ book.html: *.md
 
 book.mobi: book.html
 #	kindlegen book.html || true
-	ebook-convert book.html book.mobi --mobi-toc-at-start
+	ebook-convert book.html book.mobi
 
 book.epub:
 	ebook-convert book.html book.epub --no-default-epub-cover
