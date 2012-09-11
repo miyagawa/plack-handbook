@@ -29,7 +29,7 @@ So you have two apps, one is to say hi to John and another to Bob, and say if yo
     $app->mount("/john" => $app1);
     $app->mount("/bob"  => $app2);
 
-There you go. Your app now dispatches all requests beginning with `/john` to `$app1` which says "Hello John" and `/bob` to $app2, which is to say "Hello Bob". As a result, all requests to unmapped paths, like the root ("/") gives you 404.
+There you go. Your app now dispatches all requests beginning with `/john` to `$app1` which says "Hello John" and `/bob` to `$app2`, which is to say "Hello Bob". As a result, all requests to unmapped paths, like the root ("/") gives you 404.
 
 The environment variables such as `PATH_INFO` and `SCRIPT_NAME` are automatically adjusted so it just works like when your application is mounted using Apache's mod_alias or CGI scripts. Your application framework should always use `PATH_INFO` to dispatch requests, and concatenate with `SCRIPT_NAME` to build links.
 
