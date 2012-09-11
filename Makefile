@@ -5,10 +5,10 @@ book.html: *.md
 
 book.mobi: book.html
 #	kindlegen book.html || true
-	ebook-convert book.html book.mobi
+	ebook-convert book.html book.mobi --mobi-toc-at-start
 
 book.epub:
-	ebook-convert book.html book.epub
+	ebook-convert book.html book.epub --no-default-epub-cover
 
 clean:
 	rm book.*
