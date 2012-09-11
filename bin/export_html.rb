@@ -12,10 +12,14 @@ HEADER = <<HEAD
 <body>
 HEAD
 
+def munge(html)
+  html.gsub /<h2>/, '<h2 class="chapter">'
+end
+
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
 File.open('book.html', 'w') do |io|
   io.write HEADER
-  io.write markdown.render(ARGF.readlines.join '')
+  io.write munge(markdown.render(ARGF.readlines.join ''))
   io.write "</body></html>\n"
 end
 
