@@ -6,7 +6,7 @@ Similarly, if you have a large scale web application, open source or proprietary
 
 Today's entry discusses how to convert existing web application framework to adapt to the PSGI interface.
 
-## CGI.pm based framework
+### CGI.pm based framework
 
 In Day 7 we saw how to run CGI::Application based application in PSGI, using CGI::Application::PSGI. CGI::Application, as the name suggests, uses CGI.pm, so using CGI::PSGI instead and define a new runner class is the easiest to go.
 
@@ -43,7 +43,7 @@ I've implemented PSGI adapters for [Mason](http://search.cpan.org/perldoc?HTML::
 * Extracts the HTTP headers to be sent, use `psgi_header` to generate the status and headers
 * Extracts the response body (content)
 
-## Adapter based framework
+### Adapter based framework
 
 If the framework in question already uses adapter based approaches to abstract server environments, it'd be much easier to adapt to PSGI, by reusing most of the CGI adapter code. Here's the code to adapt [Squatting](http://search.cpan.org/perldoc?Squatting) to PSGI. Squatting uses Squatting::On::* namespace to adapt to environments like mod_perl, FastCGI or even other frameworks like Catalyst or HTTP::Engine. It was extremely easy to write [Squatting::On::PSGI](http://search.cpan.org/perldoc?Squatting::On::PSGI):
 
@@ -118,6 +118,6 @@ This is very straightforward, especially when compared with [Squatting::On::CGI]
 
 Similarly Catalyst uses Catalyst::Engine abstraction and [Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) is the adapter to run Catlayst on PSGI, which most of the code is copied from CGI.
 
-## mod_perl centric frameworks
+### mod_perl centric frameworks
 
 Some frameworks are centered around mod_perl's API, in which case we can't take the approaches like we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer explains his approach to make mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm) that you might be interested in, and the [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) would be a good start.
