@@ -25,4 +25,4 @@ You can also use Plack::App::Directory but this time with just the plackup comma
 
 plackup command, like the perl command itself, accepts flags like `-I` (include path) `-M` (modules to load) and `-e` (the code to eval), so it's easy to load these Plack::App::* applications without even touching a .psgi file!
 
-There is a couple other Plack::App applications in the Plack distribution but I'll save them for another Advent entry :)
+There is a couple other Plack::App applications in the Plack distribution.
