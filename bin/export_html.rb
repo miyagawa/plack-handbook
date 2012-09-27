@@ -17,9 +17,7 @@ def munge(html)
 end
 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
-File.open('book.html', 'w') do |io|
-  io.write HEADER
-  io.write munge(markdown.render(ARGF.readlines.join ''))
-  io.write "</body></html>\n"
-end
+STDOUT.write HEADER
+STDOUT.write munge(markdown.render(ARGF.readlines.join ''))
+STDOUT.write "</body></html>\n"
 
