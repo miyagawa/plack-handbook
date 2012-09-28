@@ -22,4 +22,4 @@ book.zip: plack-handbook.mobi plack-handbook-ja.mobi plack-handbook.epub plack-h
 	zip book.zip *.epub *.mobi README.md
 
 clean:
-	rm book-*.html *.epub *.mobi
+	rm book.zip book-*.html *.epub *.mobi
