@@ -56,7 +56,7 @@ PSGIアプリを作成またはロード([Plack::Util](http://search.cpan.org/pe
 
 ### ライブ/モックモード
 
-デフォルトでは`test_psgi`のコールバックはモックHTTPリクエストモードで実行され、受け取ったHTTP::RequestオブジェクトをPSGI environmentハッシュに変換し、PSGIアプリケーションを実行し、レスポンスをHTTP::Responseに変換します。
+デフォルトでは`test_psgi`のコールバックはモックHTTPリクエストモードで実行され、受け取ったHTTP::RequestオブジェクトをPSGI環境変数ハッシュに変換し、PSGIアプリケーションを実行し、レスポンスをHTTP::Responseに変換します。
 
 これをライブHTTPモードに変更して実行するには、a) パッケージ変数`$Plack::Test::Impl` または b) 環境変数 `PLACK_TEST_IMPL` を `Server` に設定します。
 

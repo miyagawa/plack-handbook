@@ -23,7 +23,7 @@ Perlでウェブアプリケーションを書く方法として長い間もっ�
         ];
     };
 
-`CGI::PSGI->new($env)` はPSGIのenvironmentハッシュを受け取り、CGI.pmのサブクラスであるCGI::PSGIのインスタンスをつくります。`param`, `query_string`といったメソッドは今までどおり動作しますが、CGIの環境変数ではなく、PSGIのenvironmentから値を取得します。
+`CGI::PSGI->new($env)` はPSGIの環境変数ハッシュを受け取り、CGI.pmのサブクラスであるCGI::PSGIのインスタンスをつくります。`param`, `query_string`といったメソッドは今までどおり動作しますが、CGIの環境変数ではなく、PSGI環境変数から値を取得します。
 
 `psgi_header` はCGIの`header`メソッドのように動作するユーティリティで、ステータスコードとHTTPヘッダの配列リファレンスをリストで返します。
 
