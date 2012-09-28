@@ -38,4 +38,4 @@ When you develop a new framework adapter or a middleware component, be sure to c
 
 Middleware::Lint validates both request and response interface, so this can be used when you develop a new PSGI web server as well. However if you are a server developer there's a more comprehensive testing tool to make sure your server behaves correctly, and that is Plack::Test::Suite.
 
-You can look at the existing tests in the `t/Plack-Server` directory for how to use this utility, but it defines lots of expected requests and responses pairs to test a new PSGI server backend. Existing Plack::Handler backends included in Plack core distribution as well as other CPAN distributions all pass this test suite.
+You can look at the existing tests in the `t/Plack-Handler` directory for how to use this utility, but it defines lots of expected requests and responses pairs to test a new PSGI server backend. Existing Plack::Handler backends included in Plack core distribution as well as other CPAN distributions all pass this test suite.

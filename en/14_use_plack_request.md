@@ -23,7 +23,7 @@ Plack::Request is a wrapper around PSGI environment, and the code goes like this
 
 The only thing you need to change, if you're migrating from HTTP::Engine, is the first line of the application to create a Plack::Request out of PSGI env (`shift`) and then call `finalize` to get an array reference out of Response object.
 
-All other methods like `path_info`, `uri`, `param`, `redirect` etc. work like HTTP::Engine::Request and Response object which is very similar to [Catalyst](http://search.cpan.org/dist/Catalyst-Runtime) 's Request and Response object.
+Many other methods like `path_info`, `uri`, `param`, `redirect` etc. work like HTTP::Engine::Request and Response object which is very similar to [Catalyst](http://search.cpan.org/dist/Catalyst-Runtime) 's Request and Response object.
 
 ### Plack::Request and Plack
 

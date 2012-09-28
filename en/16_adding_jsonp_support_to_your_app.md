@@ -55,8 +55,7 @@ And of course, this JSONP middleware should work with any existing web framework
 And then using Catalyst::Engine::PSGI and Plack::Builder, you can add a JSONP support to this controller. 
 
     use MyApp;
-    MyApp->setup_engine('PSGI');
-    my $app = sub { MyApp->run(@_) };
+    my $app = MyApp->psgi_app;
     
     use Plack::Builder;
     builder {

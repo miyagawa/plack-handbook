@@ -4,7 +4,7 @@
 
 There are many ways to test web applications, either with a live server or using a mock request technique. Some web application frameworks allow you to write an unit test using one of those methods, but the way you write tests differ per framework of your choice.
 
-Plack::Test gives you *an unified interface* to test *any* web applications and frameworks that is compatible to PSGI using *both* mock request and live HTTP server.
+Plack::Test gives you *a unified interface* to test *any* web applications and frameworks that is compatible to PSGI using *both* mock request and live HTTP server.
 
 ### Using Plack::Test
 
@@ -78,8 +78,7 @@ Once again, the beauty of PSGI and Plack is that everything written to run for t
     use Plack::Test;
     use MyCatalystApp;
     
-    MyCatalystApp->setup_engine('PSGI');
-    my $app = sub { MyCatalystApp->run(@_) };
+    my $app = MyCatalystApp->psgi_app;
     
     test_psgi $app, sub {
         my $cb = shift;
