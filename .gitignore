@@ -1,3 +1,4 @@
 book*
 plack-handbook*
 _site
+bin/export_html.rb
