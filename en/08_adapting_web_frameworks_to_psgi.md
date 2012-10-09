@@ -1,6 +1,6 @@
 ## Day 8: Adapting web frameworks to PSGI
 
-The biggest benefit of PSGI for web application framework developers is that once you adapt your framework to run on PSGI you forget and throw away everything else that you needed to deal with to, say, handle the differences between bunch of FastCGI servers or CGI.
+The biggest benefit of PSGI for web application framework developers is that once you adapt your framework to run on PSGI you catn forget and throw away everything else that you needed to deal with too, say, handle the differences between a bunch of FastCGI servers.
 
 Similarly, if you have a large scale web application, open source or proprietary, you probably have your own web application framework (or a base class or whatever).
 
@@ -33,9 +33,9 @@ In Day 7 we saw how to run a CGI::Application based application in PSGI using CG
         return [ @headers, [ $body ] ];
     }
 
-This is quite simple, isn't it? CGI::Application's `run()` method usually returns the whole output, including HTTP headers and content body. As you can see, the module has a gross hack to disable the header generation since you can use `psgi_header` method of CGI::PSGI to generate the status code and HTTP headers as an array ref.
+That's quite simple, isn't it? CGI::Application's `run()` method usually returns the whole output, including HTTP headers and content body. As you can see, the module has a gross hack to disable the header generation since you can use the `psgi_header` method of CGI::PSGI to generate the status code and HTTP headers as an array ref.
 
-I've implemented PSGI adapters for [Mason](http://search.cpan.org/perldoc?HTML::Mason) and [Maypole](http://search.cpan.org/perldoc?Maypole) and the code was pretty much all looked alike:
+I've implemented PSGI adapters for [Mason](http://search.cpan.org/perldoc?HTML::Mason) and [Maypole](http://search.cpan.org/perldoc?Maypole) and the code pretty much all looked alike:
 
 * Create CGI::PSGI out of `$env` and set that instead of the default CGI.pm instance.
 * Disable HTTP header generation if needed.
@@ -45,7 +45,7 @@ I've implemented PSGI adapters for [Mason](http://search.cpan.org/perldoc?HTML::
 
 ### Adapter based framework
 
-If the framework in question already uses adapter based approaches to abstract server environments it should be much easier to adapt to PSGI by reusing most of the CGI adapter code. Here's the code to adapt [Squatting](http://search.cpan.org/perldoc?Squatting) to PSGI. Squatting uses the Squatting::On::* namespace to adapt to environments like mod_perl, FastCGI or even other frameworks like Catalyst or HTTP::Engine. It was extremely easy to write [Squatting::On::PSGI](http://search.cpan.org/perldoc?Squatting::On::PSGI):
+If the framework in question already uses adapter based approaches to abstract server environments it should be much easier to adapt to PSGI by reusing most of the CGI adapter code. Here's the code to adapt [Squatting](http://search.cpan.org/perldoc?Squatting) to PSGI. Squatting uses the Squatting::On::* namespace to adapt to environments like mod_perl, FastCGI, or even other frameworks like Catalyst or HTTP::Engine. It was extremely easy to write [Squatting::On::PSGI](http://search.cpan.org/perldoc?Squatting::On::PSGI):
 
     package Squatting::On::PSGI;
     use strict;
@@ -114,10 +114,10 @@ If the framework in question already uses adapter based approaches to abstract s
       return $res;
     }
 
-This is very straightforward, especially when compared with [Squatting::On::CGI](http://cpansearch.perl.org/src/BEPPU/Squatting-0.70/lib/Squatting/On/CGI.pm). It's almost a line-by-line copy (with some adjustment) to use Plack::Request to parse parameters instead of CGI.pm.
+That's very straightforward, especially when compared with [Squatting::On::CGI](http://cpansearch.perl.org/src/BEPPU/Squatting-0.70/lib/Squatting/On/CGI.pm). It's almost a line-by-line copy (with some adjustment) using Plack::Request to parse parameters instead of CGI.pm.
 
-Similarly, Catalyst uses the Catalyst::Engine abstraction and [Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) is the adapter to run Catalyst on PSGI, with most of the code is copied from CGI.
+Similarly, Catalyst uses the Catalyst::Engine abstraction and [Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) is the adapter to run Catalyst on PSGI, where most of the code is copied from CGI.
 
 ### mod_perl centric frameworks
 
-Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm) that you might be interested in, and the [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) would be a good place to start.
+Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm) that you might be interested in. The [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) would be a good place to start.

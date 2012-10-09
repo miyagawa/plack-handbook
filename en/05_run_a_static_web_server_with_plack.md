@@ -1,8 +1,8 @@
 ## Day 5: Run a static web server with Plack
 
-The Plack distribution comes with some ready made PSGI applications in the Plack::App namespace. Some of them might be pretty handy, examples of that would be [Plack::App::File](http://search.cpan.org/perldoc?Plack::App::File) and [Plack::App::Directory](http://search.cpan.org/perldoc?Plack::App::Directory).
+The Plack distribution comes with some ready made PSGI applications in the Plack::App namespace. Some of them might be pretty handy, for instance [Plack::App::File](http://search.cpan.org/perldoc?Plack::App::File) and [Plack::App::Directory](http://search.cpan.org/perldoc?Plack::App::Directory).
 
-Plack::App::File translates a request path like `/foo/bar.html` into a local file like `/path/to/htdocs/foo/bar.html` and opens the file handle and passes it back as a PSGI response. So it does basically what a static web server like lighttpd, nginx or Apache does.
+Plack::App::File translates a request path like `/foo/bar.html` into a local file like `/path/to/htdocs/foo/bar.html`, opens the file handle, and passes it back as a PSGI response. So it basically does what a static web server like lighttpd, nginx or Apache does.
 
 Plack::App::Directory is a wrapper around Plack::App::File that gives a directory index, just like [Apache's mod_autoindex](http://httpd.apache.org/docs/2.0/mod/mod_autoindex.html) does.
 
@@ -15,7 +15,7 @@ and run it with plackup:
 
     > plackup file.psgi
 
-now you can get any file under your `~/public_html` with the URL http://localhost:5000/somefile.html
+now you can access any file under your `~/public_html` with the URL http://localhost:5000/somefile.html
 
 You can also use Plack::App::Directory. This time let's run it with just the plackup command line without a .psgi file:
 
