@@ -1,10 +1,10 @@
 ## Day 8: Adapting web frameworks to PSGI
 
-The biggest benefit of PSGI for web application framework developers is that once you adapt your framework to run on PSGI you catn forget and throw away everything else that you needed to deal with too, say, handle the differences between a bunch of FastCGI servers.
+The biggest benefit of PSGI for web application framework developers is that once you adapt your framework to run on PSGI you can forget and throw away everything else that you needed to deal with to, say, handle the differences between a bunch of FastCGI servers.
 
-Similarly, if you have a large scale web application, open source or proprietary, you probably have your own web application framework (or a base class or whatever).
+Similarly, if you have a large scale web application, open source or proprietary, you probably have your own web application framework (or a base class or the like).
 
-Today's entry discusses how to convert existing web application framework to the PSGI interface.
+Today's entry discusses how to convert existing web application frameworks to the PSGI interface.
 
 ### CGI.pm based framework
 
@@ -120,4 +120,4 @@ Similarly, Catalyst uses the Catalyst::Engine abstraction and [Catalyst::Engine:
 
 ### mod_perl centric frameworks
 
-Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm) that you might be interested in. The [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) would be a good place to start.
+Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm). The [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) is a good place to start.

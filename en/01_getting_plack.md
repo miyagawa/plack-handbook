@@ -1,6 +1,6 @@
 ## Day 1: Getting Plack
 
-The most important step to get started is to install [Plack](http://search.cpan.org/dist/Plack) and other utilities. Because PSGI and Plack are just normal Perl module distributions the installation is easy: just launch your CPAN shell and type
+The most important step to get started is to install [Plack](http://search.cpan.org/dist/Plack) and other utilities. Because PSGI and Plack are just normal Perl module distributions the installation is easy: just launch your CPAN shell and type:
 
 ```
 cpan> install PSGI Plack

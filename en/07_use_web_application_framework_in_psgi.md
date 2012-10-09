@@ -1,12 +1,12 @@
 ## Day 7: Use web application framework in PSGI
 
-Since we started the Plack and PSGI project in September 2009, there has been a lot of feedback from the authors of popular frameworks such as Catalyst, Jifty, and CGI::Application.
+Since we started the Plack and PSGI project in September 2009 there has been a lot of feedback from the authors of popular frameworks such as Catalyst, Jifty, and CGI::Application.
 
 [CGI::Application](http://cgi-app.org/) is one of the most "traditional" CGI-based web application framework and it uses CGI.pm exclusively to handle web server environments just like we [discussed yesterday](http://advent.plackperl.org/2009/12/day-6-convert-cgi-apps-to-psgi.html).
 
-Mark Stosberg, the current maintainer of CGI::Application, and I have been collaborating on adding PSGI support to CGI::Application. We thought of multiple approaches including adding native PSGI support to CGI.pm, but we ended up implementing [CGI::PSGI](http://search.cpan.org/perldoc?CGI::PSGI) as a CGI.pm wrapper and then [CGI::Application::PSGI](http://search.cpan.org/perldoc?CGI::Application::PSGI) to run existing CGI::Application code *unmodified* in a PSGI compatible mode.
+Mark Stosberg, the current maintainer of CGI::Application, and I have been collaborating on adding PSGI support to CGI::Application. We thought of multiple approaches including adding native PSGI support to CGI.pm, but we ended up implementing [CGI::PSGI](http://search.cpan.org/perldoc?CGI::PSGI) as a CGI.pm wrapper and then using [CGI::Application::PSGI](http://search.cpan.org/perldoc?CGI::Application::PSGI) to run existing CGI::Application code *unmodified* in a PSGI compatible mode.
 
-All you have to do is to install CGI::Application::PSGI from CPAN and write a .psgi file that looks like this:
+All you have to do is install CGI::Application::PSGI from CPAN and write a .psgi file that looks like this:
 
     use CGI::Application::PSGI;
     use WebApp;

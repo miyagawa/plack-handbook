@@ -12,7 +12,7 @@ Here's the minimal code that prints "Hello World" to the client:
         return [ 200, [ 'Content-Type' => 'text/plain' ], [ 'Hello World' ] ];
     };
 
-A PSGI application is a Perl subroutine reference (a coderef) and is usually referenced as `$app` (it could be named anything else obviously). It takes exactly one argument `$env` (which is not used in this code) and returns an array ref containing status, headers, and body. That's it.
+A PSGI application is a Perl subroutine reference (a coderef) and is usually referenced as `$app` (it could be named anything obviously). It takes exactly one argument `$env` (which is not used in this code) and returns an array ref containing status, headers, and body. That's it.
 
 Save this code in a file named `hello.psgi` and then use the plackup command to run it:
 
@@ -34,9 +34,9 @@ Hello World is the simplest code imaginable. We can do more here. Let's read and
         ];
     };
 
-This code will display the remote address using the PSGI environment hash. Normally it should be 127.0.0.1 if you're running the server on your localhost. The PSGI environment hash contains lots of information about an HTTP connection like incoming HTTP headers and request paths, much like the CGI environment variables.
+This code will display the remote address using the PSGI environment hash. It will normally be 127.0.0.1 if you're running the server on your localhost. The PSGI environment hash contains lots of information about an HTTP connection like incoming HTTP headers and request paths, much like the CGI environment variables.
 
-Want to display something that isn't just text by reading a file? Do this:
+Want to display something that isn't just text? We can do this by reading a file:
 
     my $app = sub {
         my $env = shift;
