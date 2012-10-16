@@ -20,7 +20,7 @@ Most of the Plack gangs use [github](http://github.com/) for the source control 
 
 Again, Plack is a fairly young project. It's just been 3 months since we gave this project a birth. There are many things that could get more improvements, so if you come across one of them, don't stop there. Let us know what you think is a problem, give us an insight how it could be improved, or if you're impatient, fork the project on github and send us patches.
 
-We're chatting on IRC channel #plack on irc.perl.org and there's a [mailing list](http://groups.google.com/group/psgi-plack) and [an issue tracker on github](http://github.com/miyagawa/Plack/issues) to communicate with us.
+We're chatting on IRC channel #plack on irc.perl.org and there's a [mailing list](http://groups.google.com/group/psgi-plack) and [an issue tracker on github](http://github.com/plack/Plack/issues) to communicate with us.
 
 ### On a final note...
 

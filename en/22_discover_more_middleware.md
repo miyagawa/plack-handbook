@@ -26,7 +26,7 @@ Actually this is (again) a steal from [Rack](http://rack.rubyforge.org/). Rack d
 
 By default Session will save the session in on-memory hash, which wouldn't work with the prefork (or multi process) servers. It's shipped with a couple of default store engines such as [CHI](http://search.cpan.org/perldoc?CHI), so it's so easy to adapt to other storage engines, exactly like we see with other middleware components such as Auth.
 
-Session object has standard methods like `get` and `set` and can be accessed with `plack.session` key in the PSGI env hash. Application and frameworks with access to PSGI env hash can use this Session freely in the app, like in Tatsumaki:
+Session data is stored as a plain hash reference in `psgix.session` key in the PSGI env hash. Application and frameworks with access to PSGI env hash can use this Session freely in the app by wrapping it with Plack::Session module, like in Tatsumaki:
 
      # Tatsumaki app
      sub get {

@@ -62,9 +62,7 @@ Of course you can use this URLMap and mount API to run multiple framework applic
 
     # Catalyst
     use Foo;
-    Foo->setup_engine('PSGI');
-
-    my $app1 = sub { Foo->new->run(@_) };
+    my $app1 = Foo->psgi_app;
     
     # CGI::Application
     use Bar;
