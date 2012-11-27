@@ -2,7 +2,7 @@
 
 昨日のエントリではPlackミドルウェアを.psgiで利用する方法を紹介しました。ミドルウェアを`use`して、そのあと`$app`を`wrap`メソッドでラップしていくのは退屈ですし、直感的ではありません。そこで、それをより簡単にするDSL (Domain Specific Language) 風シンタックスを用意しています。それが、Plack::Builderです。
 
-Plack::Builderのりようはとても簡単です。`builder`と`enable`キーワードを使います。
+Plack::Builderの利用はとても簡単です。`builder`と`enable`キーワードを使います。
 
     my $app = sub { 
         return [ 200, [], [ "Hello World" ] ];

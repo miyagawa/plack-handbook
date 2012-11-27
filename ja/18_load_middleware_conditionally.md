@@ -27,7 +27,7 @@ Plack::Builder に新しいキーワード `enable_if` が追加されていま�
 
 この例ではリクエストがローカルネットワークから来ているかチェックし、そうでない場合にBasic認証ミドルウェアを適用しています。
 
-Conditional は普通のミドルウェアとして実装ｓれているので、内部的には以下のコードと同等です:
+Conditional は普通のミドルウェアとして実装されているので、内部的には以下のコードと同等です:
     
     use Plack::Middleware::Conditional;
     use Plack::Middleware::Auth::Basic;
