@@ -47,7 +47,7 @@ User-Agentを偽装するためのシンプルなミドルウェアは以下の�
     
     1;
 
-たったこれだけです。Plack::Middlewareを継承し、必要とすつオプションをAccessorで定義し、`call`メソッドを実行して`$self->app`に処理をデリゲートします。このミドルウェアはPlack::BuilderのDSL(Day 11)と互換性があるので、
+たったこれだけです。Plack::Middlewareを継承し、必要とするオプションをAccessorで定義し、`call`メソッドを実装して`$self->app`に処理をデリゲートします。このミドルウェアはPlack::BuilderのDSL(Day 11)と互換性があるので、
 
     use Plack::Builder;
     
