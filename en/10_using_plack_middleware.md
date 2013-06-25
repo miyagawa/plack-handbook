@@ -4,7 +4,7 @@
 
 Middleware is a concept in PSGI (as always, stolen from Python's WSGI and Ruby's Rack) where we define components that plays the both side of a server and an application.
 
-![WSGI middleware onion](images/pylons_as_onion.png)
+![WSGI middleware onion](../images/pylons_as_onion.png)
 
 (Image courtesy of Pylons project for Python WSGI)
 

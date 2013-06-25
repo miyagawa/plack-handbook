@@ -14,7 +14,7 @@ For the couple of days we've been talking about how to convert existing CGI base
 
 to run existing CGI application that may or may not use CGI.pm (CGI.pm caches lots of environment variables so it needs `initialize_globals()` call to clear out the previous request variables).
 
-A few days ago on my flight from San Francisco to London to attend London Perl Workshop I was hacking on something more intelligent, that is to take any CGI scripts and compiles it into a subroutine. The module is named [CGI::Compile](http://search.cpan.org/perldoc?CGI::Comple) and should be best used combined with CGI::Emulate::PSGI.
+A few days ago on my flight from San Francisco to London to attend London Perl Workshop I was hacking on something more intelligent, that is to take any CGI scripts and compiles it into a subroutine. The module is named [CGI::Compile](http://search.cpan.org/perldoc?CGI::Compile) and should be best used combined with CGI::Emulate::PSGI.
 
     my $sub = CGI::Compile->compile("/path/to/script.cgi");
     my $app = CGI::Emulate::PSGI->handler($sub);
