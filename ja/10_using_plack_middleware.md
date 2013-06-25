@@ -4,7 +4,7 @@
 
 ミドルウェアはPSGIにおけるコンセプト(いつものように、PythonのWSGIやRubyのRackからのパクリです)で、サーバとアプリケーション両側の動作をするコンポーネントです。
 
-![WSGI middleware onion](images/pylons_as_onion.png)
+![WSGI middleware onion](../images/pylons_as_onion.png)
 
 (画像は Pylons project)
 
