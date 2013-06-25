@@ -14,7 +14,7 @@
 
 このコードで既存のCGIスクリプトをPSGIとして実行できます。CGI.pm を使っている場合、CGI.pmは多くのグローバル変数にキャッシュをつくるため、`initialize_globals`をリクエストごとに手動で実行する必要があります。
 
-San FranciscoからLondon Perl Workshopに向かうフライトの途中で、これよりもさらにスマートな方法を思いついてハックしていました。`do`でスクリプトを都度実行するのではなく、CGIスクリプトをサブルーチンにコンパイルしてしまうものです。このモジュールは[CGI::Compile](http://search.cpan.org/perldoc?CGI::Comple) として公開されていて、CGI::Emulate::PSGIと組み合わせて使うと最適です。
+San FranciscoからLondon Perl Workshopに向かうフライトの途中で、これよりもさらにスマートな方法を思いついてハックしていました。`do`でスクリプトを都度実行するのではなく、CGIスクリプトをサブルーチンにコンパイルしてしまうものです。このモジュールは[CGI::Compile](http://search.cpan.org/perldoc?CGI::Compile) として公開されていて、CGI::Emulate::PSGIと組み合わせて使うと最適です。
 
     my $sub = CGI::Compile->compile("/path/to/script.cgi");
     my $app = CGI::Emulate::PSGI->handler($sub);
