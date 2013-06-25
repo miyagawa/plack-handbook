@@ -8,7 +8,7 @@ Plack::TestはどんなPSGI対応のWebアプリケーションフレームワ�
 
 ### Plack::Testを利用
 
-Plack::Testのりようはとても簡単で、Perlのテストプロトコル標準である[TAP](http://testanything.org/wiki/) や[Test::More](http://search.cpan.org/perloc?Test::More)と互換性があります。
+Plack::Testのりようはとても簡単で、Perlのテストプロトコル標準である[TAP](http://testanything.org/wiki/) や[Test::More](http://search.cpan.org/perldoc?Test::More)と互換性があります。
 
     use Plack::Test;
     use Test::More;
