@@ -8,7 +8,7 @@ Plack::Test gives you *a unified interface* to test *any* web applications and f
 
 ### Using Plack::Test
 
-Using Plack::Test is pretty simple and it's of course compatible to the Perl's standard testing protocol [TAP](http://testanything.org/wiki/) and [Test::More](http://search.cpan.org/perloc?Test::More).
+Using Plack::Test is pretty simple and it's of course compatible to the Perl's standard testing protocol [TAP](http://testanything.org/wiki/) and [Test::More](http://search.cpan.org/perldoc?Test::More).
 
     use Plack::Test;
     use Test::More;
