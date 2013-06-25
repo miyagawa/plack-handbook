@@ -28,7 +28,7 @@ Day 5 ではplackupでカレントディレクトリからファイルを配信�
 
 結果として、"/static/foo.jpg" は "./static-files/foo.jpg" となります。このパターンマッチに失敗したリクエストはそのまま元の `$app`にパススルーされます。
 
-### URLMap と App::File でDYI
+### URLMap と App::File でDIY
 
 Perlですから、やり方は一つではありません。Day 12で紹介したmountやURLMapの使い方を覚えていれば、App::Fileと`mount`を使う方法はより直感的にかけます。前の例は、以下のように書けます。
 
