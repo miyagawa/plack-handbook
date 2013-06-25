@@ -53,7 +53,7 @@ The panels include Timer (the request time), Memory (how is memory increased if 
 
 Using it is so easy as this, and you an also pass the list of `panels` to enable only certain panels or additional non default panels.
 
-More extensions for the panels, such as DBI query profiler or Catalyst log dumper are being developed on [github](http://github.com/hanekomu/plack-middleware-debug/).
+More extensions for the panels, such as DBI query profiler or Catalyst log dumper are being developed on [github](http://github.com/miyagawa/plack-middleware-debug/).
 
 ### Proxy
 

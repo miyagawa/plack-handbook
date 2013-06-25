@@ -53,7 +53,7 @@ SessionミドルウェアはStevan Littleによって開発され、[github](htt
 
 利用はたったこれだけで、利用するパネルを制限したり、標準以外のものを追加するには、`panels`パラメータを指定します。
 
-DBIのクエリプロファイラや、Catalystのログなどの拡張パネルはCPANとgithubから入手可能です。
+DBIのクエリプロファイラや、Catalystのログなどの拡張パネルはCPANと[github](http://github.com/miyagawa/plack-middleware-debug/)から入手可能です。
 
 ### Proxy
 
