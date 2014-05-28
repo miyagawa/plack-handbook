@@ -6,13 +6,11 @@ For the last couple of days we've been talking about how to convert existing CGI
 
 [CGI::Emulate::PSGI](http://search.cpan.org/perldoc?CGI::Emulate::PSGI) is a module to run any CGI based perl program in a PSGI environment. Whatever messy/old script that prints stuff to STDOUT or directly reads HTTP headers from `%ENV` would just work because that's what CGI::Emulate::PSGI tries to emulate. The original POD of CGI::Emulate::PSGI was illustrating it like:
 
-```perl
     use CGI::Emulate::PSGI;
     CGI::Emulate::PSGI->handler(sub {
         do "/path/to/foo.cgi";
         CGI::initialize_globals() if &CGI::initialize_globals;
     });
-```
 
 to run existing CGI application that may or may not use CGI.pm (CGI.pm caches lots of environment variables so it needs `initialize_globals()` call to clear out the previous request variables).
 
