@@ -19,6 +19,6 @@ CGI::Application::PSGIをCPANからインストールして、`.psgi`ファイ�
 
 そして[plackup](http://advent.plackperl.org/2009/12/day-3-using-plackup.html)を使ってスタンドアロンや各種バックエンドのサーバ上で起動することができます。
 
-同様に、多くのWebフレームワークではPSGIサポートをするためのプラグイン、エンジンやアダプターを提供し、PSGIモードで起動するための機能が用意されています。たとえば[Catalyst](http://www.catalystframework.org/)ではCatalyst::EngineというレイヤーでWebサーバエンジンの抽象化をおこなっていて、[Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) でCatalystをPSGI上で起動することができます。(**注**: 2011年にCatalyst 5.8 がリリースされ、PSGIサポートはCatalyst本体に組み込まれており、エンジンを別途インストールする必要はありません)
+同様に、多くのWebフレームワークではPSGIサポートをするためのプラグイン、エンジンやアダプターを提供し、PSGIモードで起動するための機能が用意されています。たとえば[Catalyst](http://www.catalystframework.org/)ではCatalyst::EngineというレイヤーでWebサーバエンジンの抽象化を行っていて、[Catalyst::Engine::PSGI](http://search.cpan.org/perldoc?Catalyst::Engine::PSGI) でCatalystをPSGI上で起動することができます。(**注**: 2011年にCatalyst 5.8 がリリースされ、PSGIサポートはCatalyst本体に組み込まれており、エンジンを別途インストールする必要はありません)
 
 重要なのは、"PSGIサポート"しているフレームワークを利用する場合、利用者のアプリケーションをPSGI用に書き換える必要はないということです。多くの場合、1行のコードの変更も必要ありません。かつ、PSGIを利用することでplackup, Plack::Testやミドルウェアなど多くのエコシステムを利用することができます。これらについては、のちほど紹介していきます。

@@ -33,7 +33,7 @@ Plackミドルウェアでは、Webアプリケーションフレームワーク
 
 このコードでアプリケーション`$app`にBaisic認証機能が提供されます。ユーザ名*admin*がパスワード*foobar*でサインインすることができます。認証に成功したユーザはPSGI環境変数`REMOTE_USER`にセットされ、アプリケーションから利用したりAccessLogミドルウェアからログに追加されます。
 
-コールバックベースの設定になるため、Kerberosのような認証システムと連携するのはAuthen::Simpleモジュールをつかうと簡単にできます。
+コールバックベースの設定になるため、Kerberosのような認証システムと連携するのはAuthen::Simpleモジュールを使うと簡単にできます。
 
     use Plack::Builder;
     use Authen::Simple;
@@ -74,4 +74,4 @@ URLMap は複数のアプリケーションを1つのアプリケーションに
         mount "/public" => $app;
     };
 
-このようにして同一の`$app`を/publicと/privateにマップし、/privateではBasic認証を必須とします。アプリケーションでは`$env->{REMOTE_USER}`をチェックすることで認証ずみアクセスかどうか判別します。
+このようにして同一の`$app`を/publicと/privateにマップし、/privateではBasic認証を必須とします。アプリケーションでは`$env->{REMOTE_USER}`をチェックすることで認証済みアクセスかどうか判別します。
