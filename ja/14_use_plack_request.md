@@ -27,7 +27,7 @@ HTTP::Engineからマイグレートする場合、変更する箇所は`shift`�
 
 ### Plack::Request と Plack
 
-Plack::Request はPlackディストリビューションに同梱されCPANから入手可能です。Plack::Requestをフレームワークで利用した場合、Plack標準のサーバ以外でも、PSGIに対応したサーバ実装であれば、どのサーバでも動作させることができます。
+Plack::Request はPlackディストリビューションに同梱されており、CPANから入手可能です。Plack::Requestをフレームワークで利用した場合、Plack標準のサーバ以外でも、PSGIに対応したサーバ実装であれば、どのサーバでも動作させることができます。
 
 ### Plack::Request を使うか否か
 
