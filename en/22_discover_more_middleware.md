@@ -21,7 +21,7 @@ Actually this is (again) a steal from [Rack](http://rack.rubyforge.org/). Rack d
 
      builder {
          enable "Session", store => "File";
-         $qpp;
+         $app;
      };
 
 By default Session will save the session in on-memory hash, which wouldn't work with the prefork (or multi process) servers. It's shipped with a couple of default store engines such as [CHI](http://search.cpan.org/perldoc?CHI), so it's so easy to adapt to other storage engines, exactly like we see with other middleware components such as Auth.

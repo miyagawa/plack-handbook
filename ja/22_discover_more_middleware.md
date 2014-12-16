@@ -21,7 +21,7 @@ Rackでは`rack.session`をRackの環境変数で標準定義しており、Hash
 
      builder {
          enable "Session", store => "File";
-         $qpp;
+         $app;
      };
 
 デフォルトではセッションデータはオンメモリのハッシュに保存されますので、preforkやマルチプロセス型のサーバではうまく動作しません。[CHI](http://search.cpan.org/perldoc?CHI)などのエンジンが付属していて、またその他のストレージエンジンに対するインタフェースを記述することで、Authミドルウェアなどと同様、拡張を簡単に行うことができます。
