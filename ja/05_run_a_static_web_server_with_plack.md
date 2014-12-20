@@ -20,7 +20,7 @@ Plack::App::DirectoryはPlack::App::Fileのラッパーで、Apacheのmod_autoin
 Plack::App::Directory についても同様ですが、plackupのコマンドラインから直接起動する例を紹介します。
 
     > plackup -MPlack::App::Directory \
-     -e 'Plack::App::Directory->new(root => "$ENV{HOME}/Sites");
+     -e 'Plack::App::Directory->new(root => "$ENV{HOME}/Sites")'
     HTTP::Server::PSGI: Accepting connections at http://0:5000/
 
 plackupコマンドは、perlコマンド同様、`-I`(インクルードパス), `-M`(ロードするモジュール)や`-e`(実行するコード)を指定できるため、ワンライナーでPSGIアプリを書くことができます。

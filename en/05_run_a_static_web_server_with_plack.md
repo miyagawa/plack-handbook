@@ -20,7 +20,7 @@ Now you can access any file under your `~/public_html` with the URL http://local
 You can also use Plack::App::Directory. This time let's run it with just the plackup command without a .psgi file:
 
     > plackup -MPlack::App::Directory \
-     -e 'Plack::App::Directory->new(root => "$ENV{HOME}/Sites");
+     -e 'Plack::App::Directory->new(root => "$ENV{HOME}/Sites")'
     HTTP::Server::PSGI: Accepting connections at http://0:5000/
 
 The plackup command, like the perl command, accepts flags like `-I` (include path), `-M` (modules to load), and `-e` (the code to eval), so it's easy to load these Plack::App::* applications without ever touching a .psgi file!
