@@ -34,7 +34,7 @@ Notice that the order of middleware wrapping is in reverse? The builder/enable D
 
     enable "+MyFramework::PSGI::MW::Foo";
 
-the key here is to use the plus (+) sign to indicate that it is a fully qualified class name.
+The key here is to use the plus (+) sign to indicate that it is a fully qualified class name.
 
 ### What's happening behind
 

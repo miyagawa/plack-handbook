@@ -22,7 +22,7 @@ Plack::App::URLMap allows you to *composite* multiple PSGI applications into one
         return [ 200, [], [ "Hello Bob" ] ];
     };
 
-So you have two apps, one is to say hi to John and another to Bob, and say if you want to run this two application on the same server. With Plack::App::URLMap, you can do this.
+So you have two apps, one is to say hi to John and another to Bob, and say if you want to run this two applications on the same server. With Plack::App::URLMap, you can do this:
 
     use Plack::App::URLMap;
     my $app = Plack::App::URLMap->new;
