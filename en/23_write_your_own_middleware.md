@@ -104,7 +104,7 @@ and then use the + (plus) sign to indicate the fully qualified namespace,
 
     enable '+MyFramework::Middleware::Foo', ...;
 
-Or use the non-DSL API,
+or use the non-DSL API,
 
     $app = MyFramework::Middleware::Foo->wrap($app, ...);
 
