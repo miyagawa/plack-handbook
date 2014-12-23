@@ -45,7 +45,7 @@ Plackミドルウェアでは、Webアプリケーションフレームワーク
     
     builder {
         enable "Auth::Basic", authenticator => sub {
-            $auth->authenticate(@_):
+            $auth->authenticate(@_);
         };
         $app;
     };
