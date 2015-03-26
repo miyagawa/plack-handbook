@@ -52,4 +52,4 @@ This application is mapped to `/static` using URLMap, and all requests will try 
 
 This will create two applications, one with Catalyst and the other with CGI::Application and runs two applications in order. Suppose you have an overlapping URL structure and `/what/ever.cat` served with the Catalyst application and `/what/ever.cgiapp` served with the CGI::Application app.
 
-Well that might sound crazy and i guess it's better to use URLMap to map two applications in different paths, but if you *really want* to cascade them, this is the way to go :)
+Well that might sound crazy and I guess it's better to use URLMap to map two applications in different paths, but if you *really want* to cascade them, this is the way to go :)
