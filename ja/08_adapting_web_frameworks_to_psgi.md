@@ -120,4 +120,4 @@ Day 7ではCGI::ApplicationベースのアプリケーションをCGI::Applicati
 
 ### mod_perl 中心のフレームワーク
 
-いくつかのフレームワークは mod\_perl のAPIを多用して実装されていることがあり、こうした場合はCGI.pmを置き換えるといったアプローチは利用できません。Apache::RequestのAPIをfake/mock objectなどでモックする必要があるでしょう。WebGUIデベロッパーであるPatric Donelanが mod_perl ライクなAPIからPSGIへポートした際の事例を[ブログ記事](http://blog.patspam.com/2009/plack-roundup-at-sf-pm)で紹介しています。実際にリンクされている[モッククラス](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) を見てみるのもよいでしょう。
+いくつかのフレームワークは mod\_perl のAPIを多用して実装されていることがあり、こうした場合はCGI.pmを置き換えるといったアプローチは利用できません。Apache::RequestのAPIをfake/mock objectなどでモックする必要があるでしょう。WebGUIデベロッパーであるPatrick Donelanが mod_perl ライクなAPIからPSGIへポートした際の事例を[ブログ記事](http://blog.patspam.com/2009/plack-roundup-at-sf-pm)で紹介しています。実際にリンクされている[モッククラス](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) を見てみるのもよいでしょう。

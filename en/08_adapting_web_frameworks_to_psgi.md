@@ -120,4 +120,4 @@ Similarly, Catalyst uses the Catalyst::Engine abstraction and [Catalyst::Engine:
 
 ### mod_perl centric frameworks
 
-Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patric Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm). The [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) is a good place to start.
+Some frameworks are centered around mod_perl's API, in which case we can't use the approaches we've seen here. Instead, you should probably start by mocking Apache::Request APIs using a fake/mock object. Patrick Donelan, a WebGUI developer, explains his approach to make a mod_perl-like API in [his blog post](http://blog.patspam.com/2009/plack-roundup-at-sf-pm). The [mock request class linked](http://github.com/pdonelan/webgui/blob/plebgui/lib/WebGUI/Session/Plack.pm) is a good place to start.
