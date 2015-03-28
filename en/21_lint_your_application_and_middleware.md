@@ -16,11 +16,11 @@ When you access this application with the browser, the server dies with:
 
     Not an ARRAY reference at lib/Plack/Util.pm line 145.
 
-or something similar. This is because the response format is invalid per the PSGI interface: the status code is not valid, HTTP headers is not an array ref but a hash reference and the response body is a string instead of an array ref.
+or something similar. This is because the response format is invalid per the PSGI interface: the status code is not valid, HTTP headers are not an array ref but a hash reference and the response body is a string instead of an array ref.
 
 ### Lint middleware
 
-Checking them in the individual server for every request at a run time is *possible* but not *ideal*: that will be a duplicate of codes, and doing so in every request is not efficient from the performance standpoint. We should better validate if an application, middleware or server backend conforms to the PSGI interface using the test suite during the development and disable that when running on production for the best performance.
+Checking them in the individual server for every request at runtime is *possible* but not *ideal*: that will be a duplicate of codes, and doing so in every request is not efficient from the performance standpoint. We should better validate if an application, middleware or server backend conforms to the PSGI interface using the test suite during the development and disable that when running on production for the best performance.
 
 Middleware::Lint is the middleware to validate request and response interface. Run the application above with the middleware:
 

@@ -42,4 +42,4 @@ If you're curious what Plack::Builder is doing, take a look at the code and see 
 
 ### Thanks, Rack
 
-This idea of Plack::Builder is totally an inspiration by [Rack::Builder](http://m.onkey.org/2008/11/18/ruby-on-rack-2-rack-builder). You can see that they use the `use` keyword but obviously we can's *use* that in Perl :) so we chose `enable` instead. You can see that they have `map` which is to map applications to a different path, and we'll talk about its equivalent in Plack tomorrow ;)
+This idea of Plack::Builder is totally an inspiration by [Rack::Builder](http://m.onkey.org/2008/11/18/ruby-on-rack-2-rack-builder). You can see that they use the `use` keyword but obviously we can't *use* that in Perl :) so we chose `enable` instead. You can see that they have `map` which is to map applications to a different path, and we'll talk about its equivalent in Plack tomorrow ;)

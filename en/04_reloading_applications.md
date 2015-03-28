@@ -20,22 +20,22 @@ By default plackup uses a dumb timer to scan the whole directory, but if you're 
 
 ### -r vs Server auto-detection
 
-In Day 3 I told you that plackup's automatic server detection is smart enough to tell if PSGI application uses an event modules such as AnyEvent or Coro and choose the correct backend. Be aware that this automatic selection doesn't work if you use the `-r` option because plackup uses a delayed loading technique to reload apps in forked processes. It's recommended that you explicitly set the server with the `-s` option when using the `-r` option.
+In Day 3 I told you that plackup's automatic server detection is smart enough to tell if PSGI application uses an event module such as AnyEvent or Coro and choose the correct backend. Be aware that this automatic selection doesn't work if you use the `-r` option because plackup uses a delayed loading technique to reload apps in forked processes. It's recommended that you explicitly set the server with the `-s` option when using the `-r` option.
 
 ### Reloading sucks? Shotgun!
 
 Reloading a module or application in a persistent Perl process can cause problems. For instance, module package variables could be redefined or overwritten and then get stuck in a bad state.
 
-Plack now has the Shotgun loader, inspired by [Rack's shotgun](http://github.com/rtomayko/shotgun), which solves the reloading problem by loading the app on *every request* in a forked child environment.
+Plack now has the Shotgun loader, inspired by [Rack's Shotgun](http://github.com/rtomayko/shotgun), which solves the reloading problem by loading the app on *every request* in a forked child environment.
 
 Using the Shotgun loader is easy:
 
     > plackup -L Shotgun myapp.psgi
 
-This will delay the compilation of your application to runtime. When a request is received it will fork off a new child process to compile your app and return the PSGI response over the pipe. You can also preload modules in the parent process that are not likely to be updated to reduce the time needed to compile your application.
+This will delay the compilation of your application until runtime. When a request is received it will fork off a new child process to compile your app and return the PSGI response over the pipe. You can also preload modules in the parent process that are not likely to be updated to reduce the time needed to compile your application.
 
 For instance, if your application uses Moose and DBIx::Class then use the following options:
 
     > plackup -MMoose -MDBIx::Class -L Shotgun myapp.psgi
 
-This speeds up the time required to compile your application in the runtime.
+This speeds up the time required to compile your application at runtime.
