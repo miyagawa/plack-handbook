@@ -2,7 +2,7 @@
 
 ### Testing
 
-There are many ways to test web applications, either with a live server or using a mock request technique. Some web application frameworks allow you to write an unit test using one of those methods, but the way you write tests differ per framework of your choice.
+There are many ways to test web applications, either with a live server or using a mock request technique. Some web application frameworks allow you to write an unit test using one of those methods, but the way you write tests differs per framework of your choice.
 
 Plack::Test gives you *a unified interface* to test *any* web applications and frameworks that is compatible to PSGI using *both* mock request and live HTTP server.
 
