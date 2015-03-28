@@ -38,4 +38,4 @@ For instance, if your application uses Moose and DBIx::Class then use the follow
 
     > plackup -MMoose -MDBIx::Class -L Shotgun myapp.psgi
 
-This speeds up the time required to compile your application in the runtime.
+This speeds up the time required to compile your application at runtime.
