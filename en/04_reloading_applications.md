@@ -26,7 +26,7 @@ In Day 3 I told you that plackup's automatic server detection is smart enough to
 
 Reloading a module or application in a persistent Perl process can cause problems. For instance, module package variables could be redefined or overwritten and then get stuck in a bad state.
 
-Plack now has the Shotgun loader, inspired by [Rack's shotgun](http://github.com/rtomayko/shotgun), which solves the reloading problem by loading the app on *every request* in a forked child environment.
+Plack now has the Shotgun loader, inspired by [Rack's Shotgun](http://github.com/rtomayko/shotgun), which solves the reloading problem by loading the app on *every request* in a forked child environment.
 
 Using the Shotgun loader is easy:
 
