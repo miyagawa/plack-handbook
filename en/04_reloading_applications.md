@@ -20,7 +20,7 @@ By default plackup uses a dumb timer to scan the whole directory, but if you're 
 
 ### -r vs Server auto-detection
 
-In Day 3 I told you that plackup's automatic server detection is smart enough to tell if PSGI application uses an event modules such as AnyEvent or Coro and choose the correct backend. Be aware that this automatic selection doesn't work if you use the `-r` option because plackup uses a delayed loading technique to reload apps in forked processes. It's recommended that you explicitly set the server with the `-s` option when using the `-r` option.
+In Day 3 I told you that plackup's automatic server detection is smart enough to tell if PSGI application uses an event module such as AnyEvent or Coro and choose the correct backend. Be aware that this automatic selection doesn't work if you use the `-r` option because plackup uses a delayed loading technique to reload apps in forked processes. It's recommended that you explicitly set the server with the `-s` option when using the `-r` option.
 
 ### Reloading sucks? Shotgun!
 
