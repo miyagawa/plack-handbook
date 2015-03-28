@@ -30,7 +30,7 @@ Plack::App::Cascade allows you to composite multiple applications in order and r
     $map->mount("/static" => $app);
     $map->to_app;
 
-This application is mapped to `/static` using URLMap, and all requests will try the three directories specified in `@paths` using App::File application and returns the first found  files. It might be useful if you want to serve static files but want to cascade from multiple directories like this.
+This application is mapped to `/static` using URLMap, and all requests will try the three directories specified in `@paths` using App::File application and returns the first found file. It might be useful if you want to serve static files but want to cascade from multiple directories like this.
 
 ### Cascade different apps
 
