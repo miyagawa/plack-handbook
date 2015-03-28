@@ -8,7 +8,7 @@ Cascading can be useful if you have a couple of applications and runs in order, 
 
 ### Cascade Application
 
-Plack::App::Cascade allows you to composite multiple applications in order and runs until it returns non-404 responses.
+Plack::App::Cascade allows you to compound multiple applications in order and runs until it returns non-404 responses.
 
     use Plack::App::Cascade;
     use Plack::App::File;
