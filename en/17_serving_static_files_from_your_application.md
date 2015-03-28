@@ -26,7 +26,7 @@ Often you want to overlap or cofigure the directory names, so a request to the U
 
 The important thing here is to use a callback and a pattern match `sub { s/// }` instead of a plain regular expression (`qr`). The callback is tested against a request path and if it matches, the value of `$_` is being used as a request path. So in this example we tested to see if the request begins with "/static/" and in that case, strip off that part, and map the files under "./static-files/".
 
-As a result, "/static/foo.jpg" would become "./static-files/foo.jpg". All requests not matching the pattern match just passes through to the original `$app`.
+As a result, "/static/foo.jpg" would become "./static-files/foo.jpg". All requests not matching the pattern match just pass through to the original `$app`.
 
 ### Do it your own with URLMap and App::File
 
