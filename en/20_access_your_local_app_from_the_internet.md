@@ -37,4 +37,4 @@ That's it! The default Catalyst application will now be accessible with the URL 
 
 ### Notes
 
-ReverseHTTP.net gateway service is an experimental service and there's no SLA or whatever, so I don't really think it's usable for production environment and such. But it's really handy and useful to quickly test your application that needs a global access, or show off your work to friends that don't have an internal access. Much easier than other solutions that requires other software like SSH or VPN tunneling.
+ReverseHTTP.net gateway service is an experimental service and there's no SLA or whatever, so I don't really think it's usable for production environment and such. But it's really handy and useful to quickly test your application that needs a global access, or show off your work to friends that don't have an internal access. Much easier than other solutions that require other software like SSH or VPN tunneling.
