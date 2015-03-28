@@ -20,7 +20,7 @@ or something similar. This is because the response format is invalid per the PSG
 
 ### Lint middleware
 
-Checking them in the individual server for every request at a run time is *possible* but not *ideal*: that will be a duplicate of codes, and doing so in every request is not efficient from the performance standpoint. We should better validate if an application, middleware or server backend conforms to the PSGI interface using the test suite during the development and disable that when running on production for the best performance.
+Checking them in the individual server for every request at runtime is *possible* but not *ideal*: that will be a duplicate of codes, and doing so in every request is not efficient from the performance standpoint. We should better validate if an application, middleware or server backend conforms to the PSGI interface using the test suite during the development and disable that when running on production for the best performance.
 
 Middleware::Lint is the middleware to validate request and response interface. Run the application above with the middleware:
 
