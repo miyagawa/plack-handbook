@@ -16,7 +16,7 @@ When you access this application with the browser, the server dies with:
 
     Not an ARRAY reference at lib/Plack/Util.pm line 145.
 
-or something similar. This is because the response format is invalid per the PSGI interface: the status code is not valid, HTTP headers is not an array ref but a hash reference and the response body is a string instead of an array ref.
+or something similar. This is because the response format is invalid per the PSGI interface: the status code is not valid, HTTP headers are not an array ref but a hash reference and the response body is a string instead of an array ref.
 
 ### Lint middleware
 
