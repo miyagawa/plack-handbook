@@ -32,7 +32,7 @@ Using the Shotgun loader is easy:
 
     > plackup -L Shotgun myapp.psgi
 
-This will delay the compilation of your application to runtime. When a request is received it will fork off a new child process to compile your app and return the PSGI response over the pipe. You can also preload modules in the parent process that are not likely to be updated to reduce the time needed to compile your application.
+This will delay the compilation of your application until runtime. When a request is received it will fork off a new child process to compile your app and return the PSGI response over the pipe. You can also preload modules in the parent process that are not likely to be updated to reduce the time needed to compile your application.
 
 For instance, if your application uses Moose and DBIx::Class then use the following options:
 
