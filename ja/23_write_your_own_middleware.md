@@ -37,7 +37,7 @@ User-Agentを偽装するためのシンプルなミドルウェアは以下の�
     package Plack::Middleware::FakeUserAgent;
     use strict;
     use parent qw(Plack::Middleware);
-    use Plack::Util::Accessors qw(agent);
+    use Plack::Util::Accessor qw(agent);
     
     sub call {
         my($self, $env) = @_;
