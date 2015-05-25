@@ -44,7 +44,7 @@ Since it's a callback based, adding another authentication system such as Kerber
     
     builder {
         enable "Auth::Basic", authenticator => sub {
-            $auth->authenticate(@_):
+            $auth->authenticate(@_);
         };
         $app;
     };
